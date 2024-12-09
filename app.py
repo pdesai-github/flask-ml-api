@@ -1,8 +1,11 @@
 from flask import Flask, request, jsonify
 from transformers import pipeline
+from flask_cors import CORS
 import os
 
 app = Flask(__name__)
+
+CORS(app)
 
 # Load the text-generation pipeline
 text_gen_pipeline = pipeline("text-generation", model="gpt2")

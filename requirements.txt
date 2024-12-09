@@ -3,3 +3,5 @@ tensorflow==2.18.0
 transformers==4.47.0
 tf_keras==2.18.0
 Flask-Cors==5.0.0
+pandas==2.2.3
+scikit-learn==1.5.2

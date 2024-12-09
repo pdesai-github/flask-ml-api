@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 from transformers import pipeline
 from flask_cors import CORS
 import os
+from label_ml import get_label
+
 
 app = Flask(__name__)
 
@@ -9,6 +11,16 @@ CORS(app)
 
 # Load the text-generation pipeline
 text_gen_pipeline = pipeline("text-generation", model="gpt2")
+
+@app.route('/label',methods=["POST"])
+def get_label_from_feature() -> str:
+
+    data = request.get_json()
+    feature = data["feature"];
+    print(f"[Feature] {feature}")
+
+    label = get_label(feature)
+    return label;
 
 @app.route('/generate-text', methods=['POST'])
 def generate_text():

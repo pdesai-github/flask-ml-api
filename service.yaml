@@ -9,5 +9,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80 #Other pods in the cluster can connect to this service on port 80
-      targetPort: 5000 #port defined in image dockerfile
+      targetPort: 5000 #port defined in image dockerfile1
   type: LoadBalancer

@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score
 
 def get_label(feature_text_str) -> str:
     
-    ds = pd.read_csv("https://pdmlflasksacc.blob.core.windows.net/mldata/tax_sentences_labels.csv")
+    ds = pd.read_csv("tax-form-labels.csv")
     print(f"[Dataset shape] : {ds.shape}")
 
     tfid = TfidfVectorizer()

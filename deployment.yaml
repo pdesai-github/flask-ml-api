@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ml-app-tax-labels
-  namespace: ai-apps
+  namespace: easy-kart
 spec:
   replicas: 1
   selector:

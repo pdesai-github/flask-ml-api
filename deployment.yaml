@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: ml-app-tax-labels
-        image: pdesaidocker/ml-classification-tax-labels:v1
+        image: pdesaidocker/ml-classification-tax-labels:{{imageTag}}
         ports:
         - containerPort: 5000 #port defined in image dockerfile
        

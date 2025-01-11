@@ -47,14 +47,14 @@ stages:
     - task: Kubernetes@1
       displayName: Apply deployment.yaml
       inputs:
-        kubernetesServiceEndpoint: 'aks-service-conn'
+        kubernetesServiceEndpoint: 'az-k8s-ai-apps'
         namespace: 'easy-kart'
         command: 'apply'
         arguments: '-f deployment.yaml'
     - task: Kubernetes@1
       displayName: Apply service.yaml
       inputs:
-        kubernetesServiceEndpoint: 'aks-service-conn'
+        kubernetesServiceEndpoint: 'az-k8s-ai-apps'
         namespace: 'easy-kart'
         command: 'apply'
         arguments: '-f service.yaml'
